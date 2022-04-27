@@ -14,8 +14,20 @@
 
     // todo:要実装
     // Utilityクラス内のメソッドを呼んで結果を取得
+    
+    result = Utility.getTriangleArea(widthStr, heightStr);
+    
+    result = Utility.getRectangleArea(widthStr, heightStr);
+    
     // 三角形、長方形のどちらのボタンを押したかを判断し、
     // 押したボタンに対応するメソッドを呼ぶ
+    
+    if ("triangle".equals(btn)) {
+    	result = Utility.getTriangleArea(widthStr, heightStr);
+    	
+    } else if ("rectangle".equals(btn) ) { //四角形の計算ボタンを押したとき
+    	result = Utility.getRectangleArea(widthStr, heightStr);
+    };
 
 %>
 

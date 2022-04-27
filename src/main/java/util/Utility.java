@@ -36,8 +36,22 @@ public class Utility {
     public static double getTriangleArea(String widthStr, String heightStr) {
         int width = 0;
         int height = 0;
+        
+        if (!isNullOrEmpty(widthStr)) {
+            // widthStrを数値に変換
+        	width = Integer.parseInt(widthStr);
+         }
+        
+        if (!isNullOrEmpty(heightStr)) {
+            // heightStrを数値に変換
+        	height = Integer.parseInt(heightStr);
+         }
+        
+         double triangleArea = (width * height) / 2.0;
+        
+        
 
-        return 0;
+        return  triangleArea;
     }
 
     /**
@@ -46,8 +60,20 @@ public class Utility {
     public static double getRectangleArea(String widthStr, String heightStr) {
         int width = 0;
         int height = 0;
+        
+        if (!isNullOrEmpty(widthStr)) {
+            // 数値に変換
+        	width = Integer.parseInt(widthStr);
+         }
+        
+        if (!isNullOrEmpty(heightStr)) {
+            // 数値に変換
+        	height = Integer.parseInt(heightStr);
+         }
+        
+        double rectangleArea = width * height;
 
-        return 0;
+        return rectangleArea;
     }
 
     /**
@@ -56,6 +82,10 @@ public class Utility {
     public static boolean isNullOrEmpty(String str) {
         // todo:引数の値がnull、または空文字の場合は、true
         // それ以外の場合は、falseを返すように処理を修正する
-        return false;
+    	if (str == null || str.isEmpty()) {
+    		return true;
+    	}else {
+    		return false;
+    	}
     }
 }
