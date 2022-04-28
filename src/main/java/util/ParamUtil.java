@@ -9,7 +9,7 @@ public class ParamUtil {
      * ポイント計算
      */
 	public static int getPoint (int amount) {
-		int price = (int) ((int) amount * 0.01);
+		int price = (int) ((int) amount * 0.01);   
 		return  price;
 	};
 

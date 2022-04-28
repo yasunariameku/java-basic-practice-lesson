@@ -48,12 +48,12 @@
 	int point2Result = 0;
 	
 	if (rank == 0) {
-		point1Result =  ParamUtil.getPoint(amount1);
-		point2Result =  ParamUtil.getPoint(amount2);
+		point1Result =  ParamUtil.getPoint(amount1);   //ランクがない時の商品1個目のポイント計算
+		point2Result =  ParamUtil.getPoint(amount2);   //ランクがない時の商品2個目のポイント計算
 		
 	} else if (rank == 0.02 || rank == 0.03) {
-		point1Result = (int) ParamUtil.getPoint(amount1, rank);
-		point2Result = (int) ParamUtil.getPoint(amount2, rank);
+		point1Result = (int) ParamUtil.getPoint(amount1, rank);    //ランクがシルバーかゴールドの時の商品1個目のポイント計算
+		point2Result = (int) ParamUtil.getPoint(amount2, rank);    //ランクがシルバーかゴールドの時の商品2個目のポイント計算
 	}
 
 %>
